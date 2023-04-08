@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="mystyle.css">
+<script>
+  // fetch('https://98h1ihy592.execute-api.eu-central-1.amazonaws.com/prod/example_gateway_resource', {
+  //   method: "POST",
+  // })
+  //   .then((successResponse) => {
+  //     console.log(successResponse)
+  //     successResponse.json().then((bodyResponse) => {
+  //       console.log(bodyResponse)
+
+  //       const { count } = bodyResponse
+  //       console.log(count)
+
+  //       var el = document.getElementById("view-counter")
+  //       el.innerHTML = count
+  //     })
+  //   })
+  //   .catch(console.error)
+
+  let count
+  fetch('https://gvoqbyico4.execute-api.eu-central-1.amazonaws.com/prod/example_gateway_resource', {
+    method: "POST",
+  })
+    .then(response => {
+      const js = response.json()
+      console.log(js)
+      return js
+    })
+    .then(data => {
+      count = data.count
+
+      var el = document.getElementById("view-counter")
+      // el.innerHTML = `Website views: ${count}`
+      el.innerHTML = count
+    })
+    .catch(console.warn)
+</script>
+
+<body>
+  <main class="cv">
+    <div class="cv-col">
+      <div class="cv-person">
+        <h1 class="cv-person_name">Denislav Denev</h1>
+      </div>
+      <div class="cv-info">
+        <h3 class="cv-info_title">Contact</h3>
+        <p>Sofia, Bulgaria</p>
+        <p class="cv-info_contact"><a href="mailto:dwdenev@gmail.com">dwdenev@gmail.com</a></p>
+        <p class="cv-info_contact"><a href="https://www.linkedin.com/in/denislav-denev-5698a319b/"
+            target="_blank">Linkedin</a></p>
+        <p style="display:inline">Website views:</p>
+        <p id="view-counter">error</p>
+      </div>
+    </div>
+    <div class="cv-col cv-col_inverse-color">
+      <div class="cv-info">
+        <h3 class="cv-info_title">About me</h3>
+        <p>A curious and ambitious digital security specialist with 3+ years experience of managing security governance.
+          I'm a self-started and enjoy learning about new technologies and services. Recently I have completed a series
+          of DevOps and Cloud certifications and am now looking for a tech-based role that allows me to put them to
+          practice, while continuing to build upon my previous experience.</p>
+        <br>
+        <h3 class="cv-info_title">Work Experience</h3>
+        <div class="cv-info_details">
+          <h4 class="cv-info_subtitle">
+            Digital Security Assurance Specialist (Sofia, Bulgaria)
+            <span>DXC Technology | Mar 2021 - Present</span>
+          </h4>
+          <ul class="cv-info_list">
+            <li>Responsible for security governance topics such as policy compliance, patch and vulnerability
+              management, risk management, identity and access management, incident and event management</li>
+            <li>Assist with internal and external security audits</li>
+            <li>Assist delivery teams with report automation, which would reduce their work from hours to minutes</li>
+            <li>Help delivery teams with integrating security policies and make suggestions where tasks can be automated
+            </li>
+          </ul>
+        </div>
+        <div class="cv-info_details">
+          <h4 class="cv-info_subtitle">
+            Junior Account Security Officer (Sofia, Bulgaria)
+            <span>DXC Technology | Feb 2020 - Mar 2021</span>
+          </h4>
+          <ul class="cv-info_list">
+            <li>Prepared reports and managed User Access Management</li>
+            <li>Reviewed and automated vulnerability and User Access Management reports</li>
+            <li>Researched new vulnerabilities</li>
+            <li>Held vulnerability meetings with clients</li>
+          </ul>
+        </div>
+        <div class="cv-info">
+          <h3 class="cv-info_title">Education</h3>
+          <div class="cv-info_details">
+            <ul class="cv-info_list">
+              <li>DevOps - Infrastructure & Configuration Management from | Software University (Softuni) February 2023
+              </li>
+              <li>AWS Cloud Practitioner | Amazon Web Services, January 2023</li>
+              <li>ISO 27001:2022 Lead Auditor | Intertek, December 2022</li>
+              <li>DevOps - Containerization, CI/CD & Monitoring | Software University (Softuni), November 2022</li>
+              <li>ISO 27001 Internal Auditor | LRQA, June 2022</li>
+              <li>Linux System Administrator | Software University (Softuni), January 2022</li>
+              <li>Junior Penetration Tester | Elearn Security, May 2021</li>
+              <li>Networking Technologies | New Bulgarian University, September 2016 (Delayed due to COVID)</li>
+            </ul>
+          </div>
+          <div class="cv-info">
+            <h3 class="cv-info_title">Skills</h3>
+            <div class="cv-info_details">
+              <ul class="cv-info_list cv-info_skills">
+                <li>Knowedgle of C++, SQL, Python, BASH</li>
+                <li>Microsoft Office Packet</li>
+                <li>Qualys</li>
+                <li>Report automation</li>
+              </ul>
+              <ul class="cv-info_list cv-info_skills">
+              </ul>
+            </div>
+          </div>
+        </div>
+  </main>
+</body>
