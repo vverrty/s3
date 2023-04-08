@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="mystyle.css">
 <script>
-  // HIIII
-  // fetch('https://98h1ihy592.execute-api.eu-central-1.amazonaws.com/prod/example_gateway_resource', {
-  //   method: "POST",
-  // })
-  //   .then((successResponse) => {
-  //     console.log(successResponse)
-  //     successResponse.json().then((bodyResponse) => {
-  //       console.log(bodyResponse)
-
-  //       const { count } = bodyResponse
-  //       console.log(count)
-
-  //       var el = document.getElementById("view-counter")
-  //       el.innerHTML = count
-  //     })
-  //   })
-  //   .catch(console.error)
-
   let count
   fetch('https://gvoqbyico4.execute-api.eu-central-1.amazonaws.com/prod/example_gateway_resource', {
     method: "POST",
@@ -32,7 +14,6 @@
       count = data.count
 
       var el = document.getElementById("view-counter")
-      // el.innerHTML = `Website views: ${count}`
       el.innerHTML = count
     })
     .catch(console.warn)
