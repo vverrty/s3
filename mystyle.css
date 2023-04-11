@@ -95,12 +95,6 @@ p {
   font-weight: 400;
   text-transform: uppercase;
 }
-.cv-info_skills {
-  display: inline-block;
-  width: 40%;
-  list-style: square;
-  vertical-align: top;
-}
 
 #view-counter {
   display: inline-block;
